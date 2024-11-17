@@ -1,0 +1,13 @@
+streamlit
+langchain_community 
+langchain_groq
+tavily-python
+serpapi
+google-search-results
+requests
+faiss-cpu
+numpy
+sentence-transformers
+gspread
+google-auth
+st-gsheets-connection
