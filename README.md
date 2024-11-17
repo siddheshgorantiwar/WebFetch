@@ -52,7 +52,7 @@ The application enables users to:
 
 
 ## Project Demo
-  **Loom video link ** : https://www.loom.com/share/abb6883c6871479282fc96a569c77979?sid=ce5cb83c-e754-4bd1-ad45-5dd58a2d61e9
+  **Loom video link** : https://www.loom.com/share/abb6883c6871479282fc96a569c77979?sid=ce5cb83c-e754-4bd1-ad45-5dd58a2d61e9
 
   
 ## Setup Instructions
