@@ -5,12 +5,11 @@ This project is a **Streamlit-based application** that allows users to extract a
 ## Project Summary
 
 The application enables users to:
-- Upload a CSV file or load data directly from **Google Sheets**.
+- Upload a CSV file from local or load data directly from **Google Sheets**.
 - Use custom prompts to retrieve relevant web-based information via the **Tavily API**.
-- Update the Google Sheet with the newly extracted data.
-- Download the updated data in both **CSV** and **Google Sheet** formats.
-- Perform operations like cleaning, merging, and converting DataFrames.
+- get back updated CSV/google sheets link.
 
+  
 ## Features
 
 ### Web Search Integration
@@ -21,14 +20,17 @@ The application enables users to:
 - **Load Google Sheets**: Directly load data from Google Sheets using a URL input.
 - **Update Google Sheets**: After processing the data, users can update their Google Sheets with the newly fetched data.
 
+### Multiple Fields in a single prompt
+- Users can request for multiple details in a single prompt.
+  eg: customer care email-id and contact phone number for {company}
+  
 ### File Management
 - **CSV Upload**: Users can upload a CSV file directly into the application.
-- **Downloadable Outputs**: After processing, users can download the updated data in both **CSV** and **Google Sheets** formats.
-- **Data Merging**: Merges the original DataFrame with the newly fetched data, while removing any duplicates and maintaining original data integrity.
+- **Downloadable Outputs**: After processing, users can download the updated data in **CSV** OR update the original google sheet.
 
 ### Custom Data Extraction
 - **Dynamic Prompts**: The application allows users to input custom search queries to retrieve specific information related to a product or topic.
-- **Structured Data Output**: Extracted information is formatted into structured data, such as markdown tables or cleaned dictionaries, ready for use in the DataFrame.
+- **Structured Data Output**: Extracted information is formatted into markdown tables ready for use in the DataFrame.
 
 ### Session Management
 - **Column Selection**: Users can select which column in the CSV file to process using a drop-down menu.
@@ -40,7 +42,14 @@ The application enables users to:
 
 ### Progress and Status Updates
 - **Progress Bars**: A visual progress bar shows the status of data extraction across multiple columns and queries.
-- **Error Handling**: Handles errors gracefully, providing feedback to the user if something goes wrong during data loading or processing.
+
+### Error Handling
+
+1. **File Upload & Google Sheets Errors**: Invalid file types or empty files trigger prompts to upload valid CSVs. Incorrect Google Sheets URLs or authentication failures notify users to verify details.
+2. **Web Data Retrieval & Processing Errors**: If Tavily API fails, the DuckDuckGo fallback is triggered. No results or parsing issues prompt user notifications, with automatic duplicate handling.
+3. **CSV/Sheet Update & Session Errors**: Failed updates due to permissions or network issues halt operations. Session timeouts and interruptions notify users to restart or save progress periodically.
+4. **General Notifications & Alerts**: Catch-all exceptions log errors and display user-friendly messages, with progress updates keeping users informed during delays.
+
 
 ## Setup Instructions
 
