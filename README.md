@@ -63,6 +63,7 @@ The application enables users to:
    cd WebFetch
 2. pip install -r requirements.txt
 3. Create a .env File and Add the Following Credentials:
+   GROQ-API-KEY=<your_groq_api_key>
    TAVILY_API_KEY=<Your_Tavily_API_Key>
    GOOGLE_CREDENTIALS_JSON=<Path_to_Google_Service_Account_JSON_File>
 4. run the application: streamlit run app_final.py
